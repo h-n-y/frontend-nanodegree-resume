@@ -129,6 +129,15 @@ var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
 var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
 
 /*
+  CREATE HTML ELEMENTS FOR SKILLS
+  */
+var elementSkills = "";
+bio.skills.forEach(function(skill) {
+  var elementSkill = HTMLskills.replace("%data%", skill);
+  elementSkills += elementSkill;
+});
+
+/*
   ADD HTML ELEMENTS TO index.html
   */
 
@@ -143,3 +152,8 @@ $("#topContacts").append(elementContactMobile);
 $("#topContacts").append(elementContactEmail);
 $("#topContacts").append(elementContactGithub);
 $("#topContacts").append(elementContactLocation);
+
+// Skills
+// TODO - move this up to Header section
+$("#header").append(HTMLskillsStart);
+$("#skills").append(elementSkills);
