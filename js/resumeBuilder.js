@@ -26,7 +26,7 @@ bio.display = function() {
   $("#header").append(elementBioPic);
   $("#header").append(elementWelcomeMsg);
   $("#header").append(HTMLskillsStart);
-  
+
   // Contacts
   $("#topContacts").append(elementContactMobile);
   $("#topContacts").append(elementContactEmail);
@@ -96,7 +96,9 @@ var work = {
   ]
 };
 work.display = function() {
-  //TODO
+  workExperienceElements.forEach(function($job) {
+    $("#workExperience").append($job);
+  });
 };
 
 
@@ -152,6 +154,36 @@ bio.skills.forEach(function(skill) {
 });
 
 /*
+  CREATE HTML ELEMENTS FOR WORK EXPERIENCE
+  */
+  
+// list of all jobs represented as jQuery objects
+var workExperienceElements = [];
+
+work.jobs.forEach(function(job) {
+
+  // Create elements for this job's details
+  var elementEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+  var elementTitle = HTMLworkTitle.replace("%data%", job.title);
+  var elementDates = HTMLworkDates.replace("%data%", job.dates);
+  var elementLocation = HTMLworkLocation.replace("%data%", job.location);
+  var elementDescription = HTMLworkDescription.replace("%data%", job.description);
+
+  // Use jQuery to consolidate job details into a single element
+  var $elementJob = $(HTMLworkStart);
+  var $elementDescription = $(elementEmployer +
+                              elementTitle +
+                              elementDates +
+                              elementLocation +
+                              elementDescription);
+  $elementJob.append($elementDescription);
+
+  // Add this job to the list of all jobs
+  workExperienceElements.push($elementJob);
+});
+
+/*
   DISPLAY RESUME ELEMENTS
   */
 bio.display();
+work.display();
