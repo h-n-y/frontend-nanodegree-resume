@@ -109,3 +109,23 @@ var projects = {
 projects.display = function() {
   // TODO
 };
+
+
+/*
+  CREATE HTML ELEMENTS FOR HEADER
+  */
+var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
+var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
+var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+
+/*
+  ADD HTML ELEMENTS TO index.html
+  */
+
+// Header
+$("#header").append(elementWelcomeMsg);
+$("#header").append(elementBioPic);
+$("#header").append(elementHeaderRole);
+$("#header").append(elementHeaderName);
