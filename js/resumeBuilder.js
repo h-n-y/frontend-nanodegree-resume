@@ -17,7 +17,7 @@ var bio = {
   welcomeMessage: "Hi! I'm Hans.",
   skills: ["Front-End Web", "iOS"]
   // TODO
-  biopic: "url?",
+  biopic: "images/me.jpg",
 };
 // TODO
 bio.display = function() {
