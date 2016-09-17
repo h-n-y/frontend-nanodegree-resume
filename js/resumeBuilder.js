@@ -15,8 +15,7 @@ var bio = {
     location: "Boulder, CO"
   },
   welcomeMessage: "Hi! I'm Hans.",
-  skills: ["Front-End Web", "iOS"]
-  // TODO
+  skills: ["Front-End Web", "iOS"],
   biopic: "images/me.jpg",
 };
 // TODO
@@ -96,13 +95,13 @@ var projects = {
       title: "OXO",
       dates: "January 2015 - June 2015",
       description: "A tic tac toe application for iOS",
-      images = ["images/oxo-small.png"]
+      images: ["images/oxo-small.png"]
     },
     {
       title: "Bloom",
       dates: "July 2016 - Present",
       description: "A coloring book app for iOS",
-      images = ["http://www.placekitten.com/300/250"]
+      images: ["http://www.placekitten.com/300/250"]
     }
   ]
 };
