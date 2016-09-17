@@ -119,6 +119,15 @@ var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
 var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
+/*
+  CREATE HTML ELEMENTS FOR CONTACT INFO
+  */
+  var contacts = bio.contacts;
+
+  var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
+  var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
+  var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
+  var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
 
 /*
   ADD HTML ELEMENTS TO index.html
