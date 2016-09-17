@@ -96,8 +96,20 @@ var work = {
   ]
 };
 work.display = function() {
-  workExperienceElements.forEach(function($job) {
-    $("#workExperience").append($job);
+
+  work.jobs.forEach(function(job) {
+
+    // Create elements for this job's details
+    var elementEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+    var elementTitle = HTMLworkTitle.replace("%data%", job.title);
+    var elementDates = HTMLworkDates.replace("%data%", job.dates);
+    var elementLocation = HTMLworkLocation.replace("%data%", job.location);
+    var elementDescription = HTMLworkDescription.replace("%data%", job.description);
+
+    // Add new job to DOM
+    var elementJob = elementEmployer + elementTitle + elementDates + elementLocation + elementDescription;
+    $("#workExperience").append(HTMLworkStart);
+    $(".work-entry:last").append(elementJob);
   });
 };
 
@@ -153,34 +165,9 @@ bio.skills.forEach(function(skill) {
   elementSkills += elementSkill;
 });
 
-/*
-  CREATE HTML ELEMENTS FOR WORK EXPERIENCE
-  */
-  
-// list of all jobs represented as jQuery objects
-var workExperienceElements = [];
 
-work.jobs.forEach(function(job) {
 
-  // Create elements for this job's details
-  var elementEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-  var elementTitle = HTMLworkTitle.replace("%data%", job.title);
-  var elementDates = HTMLworkDates.replace("%data%", job.dates);
-  var elementLocation = HTMLworkLocation.replace("%data%", job.location);
-  var elementDescription = HTMLworkDescription.replace("%data%", job.description);
 
-  // Use jQuery to consolidate job details into a single element
-  var $elementJob = $(HTMLworkStart);
-  var $elementDescription = $(elementEmployer +
-                              elementTitle +
-                              elementDates +
-                              elementLocation +
-                              elementDescription);
-  $elementJob.append($elementDescription);
-
-  // Add this job to the list of all jobs
-  workExperienceElements.push($elementJob);
-});
 
 /*
   DISPLAY RESUME ELEMENTS
