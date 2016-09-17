@@ -121,12 +121,12 @@ var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 /*
   CREATE HTML ELEMENTS FOR CONTACT INFO
   */
-  var contacts = bio.contacts;
+var contacts = bio.contacts;
 
-  var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
-  var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
-  var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
-  var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
+var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
+var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
+var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
+var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
 
 /*
   ADD HTML ELEMENTS TO index.html
@@ -137,3 +137,9 @@ $("#header").append(elementWelcomeMsg);
 $("#header").append(elementBioPic);
 $("#header").append(elementHeaderRole);
 $("#header").append(elementHeaderName);
+
+// Contacts
+$("#topContacts").append(elementContactMobile);
+$("#topContacts").append(elementContactEmail);
+$("#topContacts").append(elementContactGithub);
+$("#topContacts").append(elementContactLocation);
