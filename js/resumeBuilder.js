@@ -20,7 +20,21 @@ var bio = {
 };
 // TODO
 bio.display = function() {
+  // Header
+  $(elementHeaderName).insertBefore($("#topContacts"));
+  $(elementHeaderRole).insertBefore($("#topContacts"));
+  $("#header").append(elementBioPic);
+  $("#header").append(elementWelcomeMsg);
+  $("#header").append(HTMLskillsStart);
+  
+  // Contacts
+  $("#topContacts").append(elementContactMobile);
+  $("#topContacts").append(elementContactEmail);
+  $("#topContacts").append(elementContactGithub);
+  $("#topContacts").append(elementContactLocation);
 
+  // Skills
+  $("#skills").append(elementSkills);
 };
 
 
@@ -138,22 +152,6 @@ bio.skills.forEach(function(skill) {
 });
 
 /*
-  ADD HTML ELEMENTS TO index.html
+  DISPLAY RESUME ELEMENTS
   */
-
-// Header
-$("#header").append(elementWelcomeMsg);
-$("#header").append(elementBioPic);
-$("#header").append(elementHeaderRole);
-$("#header").append(elementHeaderName);
-
-// Contacts
-$("#topContacts").append(elementContactMobile);
-$("#topContacts").append(elementContactEmail);
-$("#topContacts").append(elementContactGithub);
-$("#topContacts").append(elementContactLocation);
-
-// Skills
-// TODO - move this up to Header section
-$("#header").append(HTMLskillsStart);
-$("#skills").append(elementSkills);
+bio.display();
