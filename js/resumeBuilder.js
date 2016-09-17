@@ -47,7 +47,7 @@ var education = {
       name: "University of Colorado, Boulder",
       location: "Boulder, CO",
       degree: "Computer Science",
-      majors: ["BS"],
+      majors: ["BS", "MS"],
       dates: "September 2013 - May 2015",
       url: "www.colorado.edu"
     },
@@ -55,7 +55,7 @@ var education = {
       name: "Front Range Community College",
       location: "Fort Collins, CO",
       degree: "N/A",
-      majors: "N/A",
+      majors: ["N/A"],
       dates: "September 2011 - May 2013",
       url: "www.frontrange.edu"
     }
@@ -70,7 +70,26 @@ var education = {
   ]
 };
 education.display = function() {
-  // TODO
+  education.schools.forEach(function(school) {
+
+    // Create elements for this school's details
+    var elementSchoolName = HTMLschoolName.replace("%data%", school.name);
+    var elementSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+    var elementSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
+    var elementSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+    // Get majors
+    var elementSchoolMajors = "";
+    school.majors.forEach(function(major) {
+      var elementMajor = HTMLschoolMajor.replace("%data%", major);
+      elementSchoolMajors += elementMajor;
+    });
+
+    // Add school to DOM
+    var elementSchool = elementSchoolName + elementSchoolDegree + elementSchoolDates + elementSchoolLocation + elementSchoolMajors;
+    $("#education").append(HTMLschoolStart);
+    $(".education-entry:last").append(elementSchool);
+
+  });
 };
 
 
@@ -123,7 +142,7 @@ var projects = {
       title: "OXO",
       dates: "January 2015 - June 2015",
       description: "A tic tac toe application for iOS",
-      images: ["images/oxo-small.png"]
+      images: ["images/oxo-small.png", "http://www.placehold.it/300x250"]
     },
     {
       title: "Bloom",
@@ -134,7 +153,25 @@ var projects = {
   ]
 };
 projects.display = function() {
-  // TODO
+  // Iterate through each project
+  projects.projects.forEach(function(project) {
+
+    // Create elements for this project's details
+    var elementProjectTitle = HTMLprojectTitle.replace("%data%", project.title);
+    var elementProjectDates = HTMLprojectDates.replace("%data%", project.dates);
+    var elementProjectDescription = HTMLprojectDescription.replace("%data%", project.description);
+    // Get project images
+    var elementProjectImages = "";
+    project.images.forEach(function(image) {
+      var elementProjectImage = HTMLprojectImage.replace("%data%", image);
+      elementProjectImages += elementProjectImage;
+    });
+
+    // Add this project to the DOM
+    var elementProject = elementProjectTitle + elementProjectDates + elementProjectDescription + elementProjectImages;
+    $("#projects").append(HTMLprojectStart);
+    $(".project-entry:last").append(elementProject);
+  });
 };
 
 
@@ -174,3 +211,5 @@ bio.skills.forEach(function(skill) {
   */
 bio.display();
 work.display();
+projects.display();
+education.display();
