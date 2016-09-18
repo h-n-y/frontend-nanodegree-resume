@@ -18,6 +18,12 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+}
+
 p,
 span {
   font-size: 18px;
@@ -27,9 +33,17 @@ li {
   list-style-type: none;
 }
 
-#header,
+img {
+  max-width: 100%;
+}
+
+/*#header,
 #workExperience {
   text-align: center;
+}*/
+
+.bold {
+  font-weight: bold;
 }
 
 .biopic {
@@ -62,6 +76,10 @@ li {
   text-transform: uppercase;
 }
 
+.section-header {
+  margin-bottom: 48px;
+}
+
 .header-general {
   padding-top: 150px;
   padding-bottom: 64px;
@@ -75,6 +93,24 @@ li {
 .greeting {
   font-size: 24px;
   margin-bottom: 16px;
+}
+
+.work-entry {
+  margin-bottom: 48px;
+}
+
+.work-title {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.work-description {
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.date-text {
+  font-size: 14px;
 }
 
 #name {
@@ -98,4 +134,9 @@ li {
 
 #skills {
   line-height: 2em;
+}
+
+#workExperience {
+  padding-top: 64px;
+  padding-bottom: 48px;
 }

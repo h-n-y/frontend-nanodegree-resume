@@ -34,11 +34,11 @@ var HTMLskillsStart = '<h3 id="skills-h3" class="uppercase">Skills</h3><ul id="s
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<p class="work-employer uppercase"><a href="#">%data%</a></p>';
+var HTMLworkTitle = ' <p class="work-title uppercase bold">%data%</p>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkDescription = '<p class="work-description">%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';

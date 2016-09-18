@@ -218,7 +218,7 @@ work.display = function() {
     var elementDescription  = HTMLworkDescription.replace("%data%", job.description);
 
     // Add new job to DOM
-    var elementJob = elementEmployer + elementTitle + elementDates + elementLocation + elementDescription;
+    var elementJob = elementDates + elementTitle + elementEmployer + elementDescription + elementLocation;
     $("#workExperience").append(HTMLworkStart);
     $(".work-entry:last").append(elementJob);
   });
