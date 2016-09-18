@@ -16,7 +16,7 @@ var bio = {
   },
   welcomeMessage: "Hi! I'm Hans.",
   skills: ["Front-End Web", "iOS"],
-  biopic: "images/me.jpg",
+  biopic: "images/me.jpg"
 };
 
 
@@ -48,12 +48,6 @@ var education = {
       school: "Udacity",
       dates: "September 2016 - Present",
       url: "www.udacity.com",
-    },
-    {
-      title: "iOS Programming",
-      school: "Udacity",
-      dates: "March 2016 - August 2016",
-      url: "www.udacity.com"
     }
   ]
 };
@@ -116,16 +110,16 @@ bio.display = function() {
   // Header
   var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
   var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
-  var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  var elementBioPic     = HTMLbioPic.replace("%data%", bio.biopic);
   var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
   // Contact Info
   var contacts = bio.contacts;
 
-  var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
-  var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
-  var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
-  var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
+  var elementContactMobile    = HTMLmobile.replace("%data%", contacts.mobile);
+  var elementContactEmail     = HTMLemail.replace("%data%", contacts.email);
+  var elementContactGithub    = HTMLgithub.replace("%data%", contacts.github);
+  var elementContactLocation  = HTMLlocation.replace("%data%", contacts.location);
 
   // Skills
   var elementSkills = "";
@@ -163,9 +157,9 @@ education.display = function() {
   education.schools.forEach(function(school) {
 
     // Create elements for this school's details
-    var elementSchoolName = HTMLschoolName.replace("%data%", school.name);
-    var elementSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
-    var elementSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
+    var elementSchoolName     = HTMLschoolName.replace("%data%", school.name);
+    var elementSchoolDegree   = HTMLschoolDegree.replace("%data%", school.degree);
+    var elementSchoolDates    = HTMLschoolDates.replace("%data%", school.dates);
     var elementSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
     // Get majors
     var elementSchoolMajors = "";
@@ -185,10 +179,10 @@ education.display = function() {
   education.onlineCourses.forEach(function(course) {
 
     // Create elements for this course's details
-    var elementOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
+    var elementOnlineTitle  = HTMLonlineTitle.replace("%data%", course.title);
     var elementOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
-    var elementOnlineDates = HTMLonlineDates.replace("%data%", course.dates);
-    var elementOnlineURL = HTMLonlineURL.replace("%data%", course.url);
+    var elementOnlineDates  = HTMLonlineDates.replace("%data%", course.dates);
+    var elementOnlineURL    = HTMLonlineURL.replace("%data%", course.url);
 
     // Add school to DOM
     var elementOnlineClass = elementOnlineTitle + elementOnlineSchool + elementOnlineDates + elementOnlineURL;
@@ -205,11 +199,11 @@ work.display = function() {
   work.jobs.forEach(function(job) {
 
     // Create elements for this job's details
-    var elementEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-    var elementTitle = HTMLworkTitle.replace("%data%", job.title);
-    var elementDates = HTMLworkDates.replace("%data%", job.dates);
-    var elementLocation = HTMLworkLocation.replace("%data%", job.location);
-    var elementDescription = HTMLworkDescription.replace("%data%", job.description);
+    var elementEmployer     = HTMLworkEmployer.replace("%data%", job.employer);
+    var elementTitle        = HTMLworkTitle.replace("%data%", job.title);
+    var elementDates        = HTMLworkDates.replace("%data%", job.dates);
+    var elementLocation     = HTMLworkLocation.replace("%data%", job.location);
+    var elementDescription  = HTMLworkDescription.replace("%data%", job.description);
 
     // Add new job to DOM
     var elementJob = elementEmployer + elementTitle + elementDates + elementLocation + elementDescription;
@@ -226,8 +220,8 @@ projects.display = function() {
   projects.projects.forEach(function(project) {
 
     // Create elements for this project's details
-    var elementProjectTitle = HTMLprojectTitle.replace("%data%", project.title);
-    var elementProjectDates = HTMLprojectDates.replace("%data%", project.dates);
+    var elementProjectTitle       = HTMLprojectTitle.replace("%data%", project.title);
+    var elementProjectDates       = HTMLprojectDates.replace("%data%", project.dates);
     var elementProjectDescription = HTMLprojectDescription.replace("%data%", project.description);
     // Get project images
     var elementProjectImages = "";
@@ -255,13 +249,16 @@ function displayResume() {
   education.display();
 }
 
-displayResume();
 
 /*
   GOOGLE MAP
 */
+
 function displayGoogleMap() {
   $("#mapDiv").append(googleMap);
 }
 
+
+
+displayResume();
 displayGoogleMap();
