@@ -103,6 +103,18 @@ a {
   margin-bottom: 16px;
 }
 
+.list-majors {
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+.major {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.online-class-header {
+  margin-bottom: 18px;
+}
 .project-image {
   border-radius: 50%;
   width: 180px;
@@ -110,12 +122,15 @@ a {
 }
 
 .work-entry,
-.project-entry {
+.project-entry,
+.education-entry {
   margin-bottom: 48px;
 }
 
 .work-title,
 .project-title,
+.online-course-title,
+.school-name,
 .image-container {
   margin-top: 12px;
   margin-bottom: 8px;
@@ -156,7 +171,12 @@ a {
 
 #workExperience,
 #projects,
-#education {
+#education,
+#mapDiv {
   padding-top: 64px;
   padding-bottom: 48px;
+}
+
+#map {
+  height: 220px;
 }

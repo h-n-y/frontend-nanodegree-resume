@@ -37,8 +37,8 @@ var education = {
     {
       name: "Front Range Community College",
       location: "Fort Collins, CO",
-      degree: "N/A",
-      majors: ["N/A"],
+      degree: "Computer Science",
+      majors: ["AA"],
       dates: "September 2011 - May 2013",
       url: "www.frontrange.edu"
     }
@@ -179,9 +179,10 @@ education.display = function() {
       var elementMajor = HTMLschoolMajor.replace("%data%", major);
       elementSchoolMajors += elementMajor;
     });
+    var elementMajorsList = '<ul class="list-majors">' + elementSchoolMajors + '</ul>';
 
     // Add school to DOM
-    var elementSchool = elementSchoolName + elementSchoolDegree + elementSchoolDates + elementSchoolLocation + elementSchoolMajors;
+    var elementSchool = elementSchoolDates + elementSchoolName + elementSchoolDegree + elementMajorsList + elementSchoolLocation;
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementSchool);
   });
@@ -197,7 +198,7 @@ education.display = function() {
     var elementOnlineURL    = HTMLonlineURL.replace("%data%", course.url);
 
     // Add school to DOM
-    var elementOnlineClass = elementOnlineTitle + elementOnlineSchool + elementOnlineDates + elementOnlineURL;
+    var elementOnlineClass = elementOnlineDates + elementOnlineTitle + elementOnlineSchool + elementOnlineURL;
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementOnlineClass);
   });
