@@ -20,6 +20,36 @@ var bio = {
 };
 // TODO
 bio.display = function() {
+
+  /*
+    CREATE HTML ELEMENTS FOR HEADER
+    */
+
+  // Header
+  var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
+  var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
+  var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+  // Contact Info
+  var contacts = bio.contacts;
+
+  var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
+  var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
+  var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
+  var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
+
+  // Skills
+  var elementSkills = "";
+  bio.skills.forEach(function(skill) {
+    var elementSkill = HTMLskills.replace("%data%", skill);
+    elementSkills += elementSkill;
+  });
+
+
+  /*
+    ADD HEADER ELEMENTS TO DOM
+    */
   // Header
   $(elementHeaderName).insertBefore($("#topContacts"));
   $(elementHeaderRole).insertBefore($("#topContacts"));
@@ -197,35 +227,6 @@ projects.display = function() {
     $(".project-entry:last").append(elementProject);
   });
 };
-
-
-/*
-  CREATE HTML ELEMENTS FOR HEADER
-  */
-var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
-var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
-var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-
-/*
-  CREATE HTML ELEMENTS FOR CONTACT INFO
-  */
-var contacts = bio.contacts;
-
-var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
-var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
-var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
-var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
-
-/*
-  CREATE HTML ELEMENTS FOR SKILLS
-  */
-var elementSkills = "";
-bio.skills.forEach(function(skill) {
-  var elementSkill = HTMLskills.replace("%data%", skill);
-  elementSkills += elementSkill;
-});
-
 
 
 
