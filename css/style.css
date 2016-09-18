@@ -19,8 +19,8 @@ h6 {
 }
 
 body {
-  padding-left: 12px;
-  padding-right: 12px;
+  /*padding-left: 12px;
+  padding-right: 12px;*/
   text-align: center;
 }
 
@@ -171,12 +171,25 @@ a {
 
 #workExperience,
 #projects,
-#education,
-#mapDiv {
+#education {
   padding-top: 64px;
   padding-bottom: 48px;
+  padding: 64px 12px 48px 12px;
+}
+
+#mapDiv {
+  padding: 64px 0 48px 0;
 }
 
 #map {
   height: 220px;
+}
+
+#lets-connect {
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+
+#header-contacts {
+  margin-bottom: 12px;
 }
