@@ -44,7 +44,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  /*font-family: "Roboto", sans-serif;*/
 }
 
 body {
@@ -52,6 +52,7 @@ body {
   padding-right: 12px;*/
   text-align: center;
   color: 404040;
+  font-family: "Raleway", sans-serif;
 }
 
 p,
@@ -113,7 +114,7 @@ a {
 
 .section-header {
   margin-bottom: 12px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 }
 
 .header-general {
