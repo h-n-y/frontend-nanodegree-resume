@@ -86,7 +86,7 @@ var projects = {
       title: "OXO",
       dates: "January 2015 - June 2015",
       description: "A tic tac toe application for iOS",
-      images: ["images/oxo-small.png", "http://www.placehold.it/300x250"]
+      images: ["images/oxo-square.png", "http://www.placehold.it/300x250"]
     },
     {
       title: "Bloom",

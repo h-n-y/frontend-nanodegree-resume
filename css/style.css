@@ -37,6 +37,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*#header,
 #workExperience {
   text-align: center;
@@ -90,21 +94,35 @@ img {
   padding: 48px 12px 80px 12px;
 }
 
+/*.image-container {
+  margin-top
+}*/
+
 .greeting {
   font-size: 24px;
   margin-bottom: 16px;
 }
 
-.work-entry {
+.project-image {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+.work-entry,
+.project-entry {
   margin-bottom: 48px;
 }
 
-.work-title {
+.work-title,
+.project-title,
+.image-container {
   margin-top: 12px;
   margin-bottom: 8px;
 }
 
-.work-description {
+.work-description,
+.project-description {
   margin-top: 16px;
   margin-bottom: 12px;
 }
@@ -136,7 +154,9 @@ img {
   line-height: 2em;
 }
 
-#workExperience {
+#workExperience,
+#projects,
+#education {
   padding-top: 64px;
   padding-bottom: 48px;
 }
