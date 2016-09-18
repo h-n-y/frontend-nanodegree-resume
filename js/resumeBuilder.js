@@ -135,7 +135,7 @@ bio.display = function() {
   });
 
 
-  // ADD HEADER ELEMENTS TO DOM
+  // ADD HEADER AND FOOTER ELEMENTS TO DOM
 
   // Header
   $(elementHeaderName).insertBefore($("#topContacts"));
@@ -144,11 +144,11 @@ bio.display = function() {
   $("#header").append(elementWelcomeMsg);
   $("#header").append(HTMLskillsStart);
 
-  // Contacts
-  $("#topContacts").append(elementContactMobile);
-  $("#topContacts").append(elementContactEmail);
-  $("#topContacts").append(elementContactGithub);
-  $("#topContacts").append(elementContactLocation);
+  // Contacts ( add to header and footer )
+  [elementContactMobile, elementContactEmail, elementContactGithub, elementContactLocation].forEach(function(contact) {
+    $("#topContacts").append(contact);
+    $("#footerContacts").append(contact);
+  });
 
   // Skills
   $("#skills").append(elementSkills);
