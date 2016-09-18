@@ -14,7 +14,8 @@ var bio = {
     github: "h-n-y",
     location: "Boulder, CO"
   },
-  welcomeMessage: "Hi! I'm Hans.",
+  greeting: "Hi! I'm Hans.",
+  welcomeMessage: "I develop applications for the web and mobile.",
   skills: ["Front-End Web", "iOS"],
   biopic: "images/me.jpg"
 };
@@ -111,6 +112,7 @@ bio.display = function() {
   var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
   var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
   var elementBioPic     = HTMLbioPic.replace("%data%", bio.biopic);
+  var elementGreeting = HTMLgreeting.replace("%data%", bio.greeting);
   var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
   // Contact Info
@@ -131,20 +133,30 @@ bio.display = function() {
 
   // ADD HEADER AND FOOTER ELEMENTS TO DOM
 
-  // Header
-  $(elementHeaderName).insertBefore($("#topContacts"));
-  $(elementHeaderRole).insertBefore($("#topContacts"));
-  $("#header").append(elementBioPic);
-  $("#header").append(elementWelcomeMsg);
-  $("#header").append(HTMLskillsStart);
+  // HEADER
+  // General
+  var $elementHeaderGeneral = $(HTMLheaderGeneral);
+  $elementHeaderGeneral.append($(elementHeaderName));
+  $elementHeaderGeneral.append($(elementHeaderRole));
+  $elementHeaderGeneral.append($(elementContactLocation));
+  $elementHeaderGeneral.append($("#topContacts"));
+  // About
+  var $elementHeaderAbout = $(HTMLheaderAbout);
+  $elementHeaderAbout.append(elementBioPic);
+  $elementHeaderAbout.append(elementGreeting);
+  $elementHeaderAbout.append(elementWelcomeMsg);
+  $elementHeaderAbout.append(HTMLskillsStart);
 
-  // Contacts ( add to header and footer )
-  [elementContactMobile, elementContactEmail, elementContactGithub, elementContactLocation].forEach(function(contact) {
+  $("#header").append($elementHeaderGeneral);
+  $("#header").append($elementHeaderAbout);
+
+  // CONTACTS ( add to header and footer )
+  [elementContactMobile, elementContactEmail, elementContactGithub].forEach(function(contact) {
     $("#topContacts").append(contact);
     $("#footerContacts").append(contact);
   });
 
-  // Skills
+  // SKILLS
   $("#skills").append(elementSkills);
 };
 

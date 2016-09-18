@@ -17,3 +17,85 @@ h6 {
   margin:0;
   font-family: "Roboto", sans-serif;
 }
+
+p,
+span {
+  font-size: 18px;
+}
+
+li {
+  list-style-type: none;
+}
+
+#header,
+#workExperience {
+  text-align: center;
+}
+
+.biopic {
+  border-radius: 50%;
+  width: 50%;
+  display: block;
+  margin: 0 auto 16px auto;
+}
+
+.contact-info {
+  display: none;
+}
+
+.contact-icon {
+  font-size: 30px;
+}
+
+.contact-location {
+  width: 100%;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.section-header,
+.uppercase {
+  text-transform: uppercase;
+}
+
+.header-general {
+  padding-top: 150px;
+  padding-bottom: 64px;
+}
+
+.header-about {
+  /*padding: 64px 12px;*/
+  padding: 48px 12px 80px 12px;
+}
+
+.greeting {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+#name {
+  /*margin: 150px auto 12px auto;*/
+  margin-bottom: 12px;
+}
+
+#location {
+  margin-top: 16px;
+  margin-bottom: 200px;
+}
+
+#topContacts {
+  margin-bottom: 24px;
+}
+
+#skills-h3 {
+  margin-top: 64px;
+  margin-bottom: 8px;
+}
+
+#skills {
+  line-height: 2em;
+}
