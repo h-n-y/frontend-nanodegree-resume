@@ -2,9 +2,9 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
- /*
-  Biography
-  */
+/*
+Biography
+*/
 var bio = {
   name: "Hans Yelek",
   role: "Web Developer",
@@ -18,59 +18,11 @@ var bio = {
   skills: ["Front-End Web", "iOS"],
   biopic: "images/me.jpg",
 };
-// TODO
-bio.display = function() {
-
-  /*
-    CREATE HTML ELEMENTS FOR HEADER
-    */
-
-  // Header
-  var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
-  var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
-  var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-  var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-
-  // Contact Info
-  var contacts = bio.contacts;
-
-  var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
-  var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
-  var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
-  var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
-
-  // Skills
-  var elementSkills = "";
-  bio.skills.forEach(function(skill) {
-    var elementSkill = HTMLskills.replace("%data%", skill);
-    elementSkills += elementSkill;
-  });
-
-
-  /*
-    ADD HEADER ELEMENTS TO DOM
-    */
-  // Header
-  $(elementHeaderName).insertBefore($("#topContacts"));
-  $(elementHeaderRole).insertBefore($("#topContacts"));
-  $("#header").append(elementBioPic);
-  $("#header").append(elementWelcomeMsg);
-  $("#header").append(HTMLskillsStart);
-
-  // Contacts
-  $("#topContacts").append(elementContactMobile);
-  $("#topContacts").append(elementContactEmail);
-  $("#topContacts").append(elementContactGithub);
-  $("#topContacts").append(elementContactLocation);
-
-  // Skills
-  $("#skills").append(elementSkills);
-};
 
 
 /*
   Education
-  */
+*/
 var education = {
   schools: [
     {
@@ -105,9 +57,109 @@ var education = {
     }
   ]
 };
+
+
+/*
+  Work
+*/
+var work = {
+  jobs: [
+    {
+      employer: "Woodwright Contracting Corporation",
+      title: "Carpenter",
+      location: "Boulder, CO",
+      dates: "April 2016 - Present",
+      description: "I help frame houses and perform remodels and residential homes."
+    },
+    {
+      employer: "Blackjack Pizza",
+      title: "Delivery Driver",
+      location: "Boulder, CO",
+      dates: "October 2013 - April 2016",
+      description: "I delivered pizzas and other food in the Boulder area."
+    }
+  ]
+};
+
+
+/*
+  Projects
+*/
+var projects = {
+  projects: [
+    {
+      title: "OXO",
+      dates: "January 2015 - June 2015",
+      description: "A tic tac toe application for iOS",
+      images: ["images/oxo-small.png", "http://www.placehold.it/300x250"]
+    },
+    {
+      title: "Bloom",
+      dates: "July 2016 - Present",
+      description: "A coloring book app for iOS",
+      images: ["http://www.placekitten.com/300/250"]
+    }
+  ]
+};
+
+
+/*
+  DISPLAY METHODS
+*/
+
+// BIO
+
+bio.display = function() {
+
+  // CREATE HTML ELEMENTS FOR HEADER
+
+  // Header
+  var elementHeaderName = HTMLheaderName.replace("%data%", bio.name);
+  var elementHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
+  var elementBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  var elementWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+  // Contact Info
+  var contacts = bio.contacts;
+
+  var elementContactMobile = HTMLmobile.replace("%data%", contacts.mobile);
+  var elementContactEmail = HTMLemail.replace("%data%", contacts.email);
+  var elementContactGithub = HTMLgithub.replace("%data%", contacts.github);
+  var elementContactLocation = HTMLlocation.replace("%data%", contacts.location);
+
+  // Skills
+  var elementSkills = "";
+  bio.skills.forEach(function(skill) {
+    var elementSkill = HTMLskills.replace("%data%", skill);
+    elementSkills += elementSkill;
+  });
+
+
+  // ADD HEADER ELEMENTS TO DOM
+
+  // Header
+  $(elementHeaderName).insertBefore($("#topContacts"));
+  $(elementHeaderRole).insertBefore($("#topContacts"));
+  $("#header").append(elementBioPic);
+  $("#header").append(elementWelcomeMsg);
+  $("#header").append(HTMLskillsStart);
+
+  // Contacts
+  $("#topContacts").append(elementContactMobile);
+  $("#topContacts").append(elementContactEmail);
+  $("#topContacts").append(elementContactGithub);
+  $("#topContacts").append(elementContactLocation);
+
+  // Skills
+  $("#skills").append(elementSkills);
+};
+
+
+// EDUCATION
+
 education.display = function() {
 
-  // Display schools
+  // DISPLAY SCHOOLS
   education.schools.forEach(function(school) {
 
     // Create elements for this school's details
@@ -128,9 +180,8 @@ education.display = function() {
     $(".education-entry:last").append(elementSchool);
   });
 
-  // Display Online Courses
+  // DISPLAY ONLINE COURSES
   $("#education").append(HTMLonlineClasses);
-
   education.onlineCourses.forEach(function(course) {
 
     // Create elements for this course's details
@@ -147,27 +198,8 @@ education.display = function() {
 };
 
 
-/*
-  Work
-  */
-var work = {
-  jobs: [
-    {
-      employer: "Woodwright Contracting Corporation",
-      title: "Carpenter",
-      location: "Boulder, CO",
-      dates: "April 2016 - Present",
-      description: "I help frame houses and perform remodels and residential homes."
-    },
-    {
-      employer: "Blackjack Pizza",
-      title: "Delivery Driver",
-      location: "Boulder, CO",
-      dates: "October 2013 - April 2016",
-      description: "I delivered pizzas and other food in the Boulder area."
-    }
-  ]
-};
+// WORK
+
 work.display = function() {
 
   work.jobs.forEach(function(job) {
@@ -187,25 +219,8 @@ work.display = function() {
 };
 
 
-/*
-  Projects
-  */
-var projects = {
-  projects: [
-    {
-      title: "OXO",
-      dates: "January 2015 - June 2015",
-      description: "A tic tac toe application for iOS",
-      images: ["images/oxo-small.png", "http://www.placehold.it/300x250"]
-    },
-    {
-      title: "Bloom",
-      dates: "July 2016 - Present",
-      description: "A coloring book app for iOS",
-      images: ["http://www.placekitten.com/300/250"]
-    }
-  ]
-};
+// PROJECTS
+
 projects.display = function() {
   // Iterate through each project
   projects.projects.forEach(function(project) {
@@ -231,7 +246,7 @@ projects.display = function() {
 
 /*
   DISPLAY RESUME ELEMENTS
-  */
+*/
 
 function displayResume() {
   bio.display();
