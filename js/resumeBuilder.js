@@ -229,12 +229,15 @@ projects.display = function() {
 };
 
 
-
-
 /*
   DISPLAY RESUME ELEMENTS
   */
-bio.display();
-work.display();
-projects.display();
-education.display();
+
+function displayResume() {
+  bio.display();
+  work.display();
+  projects.display();
+  education.display();
+}
+
+displayResume();
