@@ -60,6 +60,8 @@ var HTMLonlineSchool = '<p class="uppercase">%data%</p>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
+var HTMLsectionUnderline = '<div class="section-underline"></div>'
+
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 

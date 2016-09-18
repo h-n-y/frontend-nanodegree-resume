@@ -209,6 +209,12 @@ education.display = function() {
 
 work.display = function() {
 
+  // Create section header underline element
+  var $elementSectionUnderline = $(HTMLsectionUnderline);
+  $elementSectionUnderline.addClass("background-pink");
+  // TODO add color class for section underline
+  $("#workExperience").append($elementSectionUnderline);
+
   work.jobs.forEach(function(job) {
 
     // Create elements for this job's details
