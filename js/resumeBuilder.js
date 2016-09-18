@@ -66,10 +66,18 @@ var education = {
       school: "Udacity",
       dates: "September 2016 - Present",
       url: "www.udacity.com",
+    },
+    {
+      title: "iOS Programming",
+      school: "Udacity",
+      dates: "March 2016 - August 2016",
+      url: "www.udacity.com"
     }
   ]
 };
 education.display = function() {
+
+  // Display schools
   education.schools.forEach(function(school) {
 
     // Create elements for this school's details
@@ -88,7 +96,23 @@ education.display = function() {
     var elementSchool = elementSchoolName + elementSchoolDegree + elementSchoolDates + elementSchoolLocation + elementSchoolMajors;
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementSchool);
+  });
 
+  // Display Online Courses
+  $("#education").append(HTMLonlineClasses);
+
+  education.onlineCourses.forEach(function(course) {
+
+    // Create elements for this course's details
+    var elementOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
+    var elementOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
+    var elementOnlineDates = HTMLonlineDates.replace("%data%", course.dates);
+    var elementOnlineURL = HTMLonlineURL.replace("%data%", course.url);
+
+    // Add school to DOM
+    var elementOnlineClass = elementOnlineTitle + elementOnlineSchool + elementOnlineDates + elementOnlineURL;
+    $("#education").append(HTMLschoolStart);
+    $(".education-entry:last").append(elementOnlineClass);
   });
 };
 
