@@ -256,3 +256,12 @@ function displayResume() {
 }
 
 displayResume();
+
+/*
+  GOOGLE MAP
+*/
+function displayGoogleMap() {
+  $("#mapDiv").append(googleMap);
+}
+
+displayGoogleMap();
