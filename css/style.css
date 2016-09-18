@@ -1,3 +1,32 @@
+/*
+  Color scheme used for this project from Adobe Color
+
+  Name: Martinis At Lunchtime
+  Colors:
+  #222130 - Navy Blue
+  #464d57 - Blue-Grey
+  #d4e8d3 - Pale Green
+  #fffcfb - White
+  #ed8917 - Orange
+*/
+/*
+  Color scheme used for this project from Adobe Color
+
+  Name: Green Dark Blue
+  Colors:
+  #ffffff - White
+  #aeaeae - Light Grey
+  #e64c66 - Pink
+  #2d3e50 - Blue
+  #1bbc9b - Green
+
+
+  Additional Colors:
+
+  #20dcb4 - Light Green
+  #404040 - Grey
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -22,6 +51,7 @@ body {
   /*padding-left: 12px;
   padding-right: 12px;*/
   text-align: center;
+  color: 404040;
 }
 
 p,
@@ -51,6 +81,7 @@ a {
 }
 
 .biopic {
+  border: 16px solid #20dcb4;
   border-radius: 50%;
   width: 50%;
   display: block;
@@ -62,7 +93,7 @@ a {
 }
 
 .contact-icon {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .contact-location {
@@ -85,6 +116,8 @@ a {
 }
 
 .header-general {
+  /*background-image: url("../images/background.png");
+  background-size: cover;*/
   padding-top: 150px;
   padding-bottom: 64px;
 }
@@ -163,6 +196,7 @@ a {
 #skills-h3 {
   margin-top: 64px;
   margin-bottom: 8px;
+  color: #20dcb4;
 }
 
 #skills {
@@ -193,3 +227,51 @@ a {
 #header-contacts {
   margin-bottom: 12px;
 }
+
+/*#header-background {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-general {
+  position: relative;
+}*/
+
+/*  Colors
+---------------------------------------------------------------*/
+
+.text-color-dark {
+  color: #404040;
+}
+
+.header-general {
+  background-color: #464d57;
+  background-color: #222130;
+  background-color: #2d3e50;
+  color: white;
+}
+
+.header-about {
+  background-color: #d4e8d3;
+  background-color: #1bbc9b;
+}
+
+.greeting {
+  color: white;
+}
+
+.contact-link {
+  color: white;
+}
+
+.contact-link:hover {
+  color: #e64c66;
+}
+/*.greeting {
+  color: #e64c66;
+}*/

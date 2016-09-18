@@ -18,11 +18,11 @@ var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h3 id="role">%data%</h3>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="contact-info">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="contact-icon"><i class="fa fa-mobile" aria-hidden="true"></i></span><span class="contact-info">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="contact-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="contact-info">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span>twitter</span><span class="contact-info">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="contact-icon"><i class="fa fa-github" aria-hidden="true"></i></span><span class="contact-info">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span>blog</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><a href="#" class="contact-link"><span class="contact-icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="contact-info">%data%</span></a></li>';
+var HTMLemail = '<li class="flex-item"><a href="#" class="contact-link"><span class="contact-icon"><i class="fa fa-envelope-square" aria-hidden="true"></i></span><span class="contact-info">%data%</span></a></li>';
+var HTMLtwitter = '<li class="flex-item"><a href="#" class="contact-link"><span>twitter</span><span class="contact-info">%data%</span></a></li>';
+var HTMLgithub = '<li class="flex-item"><a href="#" class="contact-link"><span class="contact-icon"><i class="fa fa-github-square" aria-hidden="true"></i></span><span class="contact-info">%data%</span></a></li>';
+var HTMLblog = '<li class="flex-item"><a href="#" class="contact-link"><span>blog</span><span class="white-text">%data%</span></a></li>';
 //var HTMLlocation = '<li class="flex-item contact-location"><span class="contact-info">%data%</span></li>';
 var HTMLlocation = '<p id="location">%data%</p>'
 
@@ -31,7 +31,7 @@ var HTMLgreeting = '<p class="greeting">%data%</p>'
 var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 
 var HTMLskillsStart = '<h3 id="skills-h3" class="uppercase">Skills</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item uppercase">%data%</li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<p class="work-employer uppercase"><a href="#">%data%</a></p>';
