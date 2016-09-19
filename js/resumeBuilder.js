@@ -9,9 +9,10 @@ var bio = {
   name: "Hans Yelek",
   role: "Web Developer",
   contacts: {
-    mobile: "(303) 847-5273",
+    mobile: "303-847-5273",
     email: "hnyelek@gmail.com",
     github: "h-n-y",
+    githubURL: "https://github.com/h-n-y",
     location: "Boulder, CO"
   },
   greeting: "Hi! I'm Hans.",
@@ -148,10 +149,14 @@ bio.display = function() {
   $elementHeaderGeneral.append($("#topContacts"));
   // About
   var $elementHeaderAbout = $(HTMLheaderAbout);
-  $elementHeaderAbout.append(elementBioPic);
-  $elementHeaderAbout.append(elementGreeting);
-  $elementHeaderAbout.append(elementWelcomeMsg);
-  $elementHeaderAbout.append(HTMLskillsStart);
+  var $picContainer = $(HTMLheaderAboutContent).append(elementBioPic);
+  var $greetingContainer = $(HTMLheaderAboutContent).append(elementGreeting).append(elementWelcomeMsg).append(HTMLskillsStart);
+  $elementHeaderAbout.append($picContainer);
+  $elementHeaderAbout.append($greetingContainer);
+  // $elementHeaderAbout.append(elementBioPic);
+  // $elementHeaderAbout.append(elementGreeting);
+  // $elementHeaderAbout.append(elementWelcomeMsg);
+  // $elementHeaderAbout.append(HTMLskillsStart);
 
   $("#header").append($elementHeaderGeneral);
   $("#header").append($elementHeaderAbout);
@@ -161,6 +166,11 @@ bio.display = function() {
     $("#topContacts").append(contact);
     $("#footerContacts").append(contact);
   });
+
+  // SET href ATTRIBUTES FOR CONTACT LINKS
+  $(".link-mobile").attr("href", "tel:" + bio.contacts.mobile);
+  $(".link-email").attr("href", "mailto:" + bio.contacts.email);
+  $(".link-github").attr("href", bio.contacts.githubURL);
 
   // SKILLS
   $("#skills").append(elementSkills);

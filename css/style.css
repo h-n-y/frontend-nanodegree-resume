@@ -1,17 +1,6 @@
 /*
   Color scheme used for this project from Adobe Color
 
-  Name: Martinis At Lunchtime
-  Colors:
-  #222130 - Navy Blue
-  #464d57 - Blue-Grey
-  #d4e8d3 - Pale Green
-  #fffcfb - White
-  #ed8917 - Orange
-*/
-/*
-  Color scheme used for this project from Adobe Color
-
   Name: Green Dark Blue
   Colors:
   #ffffff - White
@@ -107,6 +96,11 @@ a {
   font-size: 36px;
 }
 
+.contact-icon,
+.contact-info {
+  width: 100%;
+}
+
 .contact-location {
   width: 100%;
 }
@@ -115,6 +109,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 
 .section-header,
@@ -137,6 +132,11 @@ a {
 .header-about {
   /*padding: 64px 12px;*/
   padding: 48px 12px 80px 12px;
+}
+
+.header-about-content {
+  width: 100%;
+  max-width: 720px;
 }
 
 .greeting {
@@ -170,7 +170,8 @@ a {
 .work-entry,
 .project-entry,
 .education-entry {
-  margin: 24px 0;
+  margin: 24px auto;
+  max-width: 720px;
 }
 
 .work-title,
@@ -241,7 +242,7 @@ a {
   margin-bottom: 12px;
 }
 
-/*  Colors
+/*  Non-layout styling
 ---------------------------------------------------------------*/
 
 
@@ -271,6 +272,7 @@ a {
 
 .section-underline {
   width: 70%;
+  max-width: 700px;
   height: 3px;
   margin: 12px auto 48px auto;
 }
@@ -341,6 +343,105 @@ a {
   font-size: 1.2rem;
 }
 
-/*.location-text {
-  text-transform: uppercase;
-}*/
+#footerContacts a:hover {
+  color: #2d3e50;
+}
+
+@media screen and (min-width: 500px) {
+
+  .header-general,
+  .header-about,
+  #workExperience,
+  #projects,
+  #education,
+  #header-places {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+@media screen and (min-width: 550px) {
+
+  /* Two-column layout for project images */
+  .image-container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+
+  /* Move contact icons closer together */
+
+  #topContacts,
+  #footerContacts {
+    justify-content: center;
+  }
+
+  .flex-item {
+    width: 60px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  /*.header-general {
+    padding-top: 200px;
+    padding-bottom: 88px;
+  }
+
+  .header-about {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }*/
+}
+
+@media screen and (min-width: 1024px) {
+
+  h2 {
+    font-size: 2.0rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  p,
+  span {
+    font-size: 22px;
+  }
+
+  .date-text,
+  .location-text {
+    font-size: 18px;
+  }
+
+  .greeting {
+    font-size: 32px;
+  }
+
+  .welcome-message {
+    font-size: 24px;
+  }
+
+  .skill {
+    font-size: 1.6rem;
+  }
+
+  .header-general {
+    padding-top: 200px;
+    padding-bottom: 88px;
+  }
+
+  .header-about {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  #skills-h3 {
+    font-size: 1.5rem;
+  }
+}

@@ -13,16 +13,17 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderGeneral = '<section class="header-general"></section>';
-var HTMLheaderAbout = '<section class="header-about"></section>'
+var HTMLheaderAbout = '<section class="header-about flex-box"></section>'
+var HTMLheaderAboutContent = '<div class="header-about-content"></div>';
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<h3 id="role">%data%</h3>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="contact-info">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><a href="#" class="contact-link"><span class="contact-icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="contact-info">%data%</span></a></li>';
-var HTMLemail = '<li class="flex-item"><a href="#" class="contact-link"><span class="contact-icon"><i class="fa fa-envelope-square" aria-hidden="true"></i></span><span class="contact-info">%data%</span></a></li>';
-var HTMLtwitter = '<li class="flex-item"><a href="#" class="contact-link"><span>twitter</span><span class="contact-info">%data%</span></a></li>';
-var HTMLgithub = '<li class="flex-item"><a href="#" class="contact-link"><span class="contact-icon"><i class="fa fa-github-square" aria-hidden="true"></i></span><span class="contact-info">%data%</span></a></li>';
-var HTMLblog = '<li class="flex-item"><a href="#" class="contact-link"><span>blog</span><span class="white-text">%data%</span></a></li>';
+var HTMLmobile = '<li class="flex-item"><a href="#" class="contact-link link-mobile flex-box"><span class="contact-icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span><span class="contact-info"><br>%data%</span></a></li>';
+var HTMLemail = '<li class="flex-item"><a href="#" class="contact-link link-email flex-box"><span class="contact-icon"><i class="fa fa-envelope-square" aria-hidden="true"></i></span><span class="contact-info"><br>%data%</span></a></li>';
+var HTMLtwitter = '<li class="flex-item"><a href="#" class="contact-link link-twitter flex-box"><span>twitter</span><span class="contact-info"><br>%data%</span></a></li>';
+var HTMLgithub = '<li class="flex-item"><a href="#" class="contact-link link-github flex-box"><span class="contact-icon"><i class="fa fa-github-square" aria-hidden="true"></i></span><span class="contact-info"><br>%data%</span></a></li>';
+var HTMLblog = '<li class="flex-item"><a href="#" class="contact-link link-blog flex-box"><span>blog</span><span class="white-text">%data%</span></a></li>';
 //var HTMLlocation = '<li class="flex-item contact-location"><span class="contact-info">%data%</span></li>';
 var HTMLlocation = '<p id="location">%data%</p>'
 
