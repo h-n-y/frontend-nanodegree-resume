@@ -19,6 +19,21 @@ $(function() {
       link: "#link-contact"
     }
   ];
+  // Convenience function that returns the section id for the corresponding link or ""
+  // if not found
+  sectionLinkIDs.sectionIDforLink = function(linkID) {
+    var sectionID = "";
+
+    var currentLink;
+    for ( var i = 0; i < sectionLinkIDs.length; ++i ) {
+      currentLink = sectionLinkIDs[i].link.slice(1);
+      if ( currentLink === linkID ) {
+        sectionID = sectionLinkIDs[i].section;
+        break;
+      }
+    }
+    return sectionID;
+  };
 
   // Update the active link in the navbar according to the page's vertical
   // offset.
@@ -56,9 +71,31 @@ $(function() {
 
   // Update the 'current' section in the navbar when a link
   // is clicked
-  $(".nav-link").click(function() {
+  $(".nav-link").click(function(event) {
+    event.preventDefault();
+
+    // Update link in navbar
     $(".nav-link").parent().removeClass("active");
     $(this).parent().addClass("active");
+
+    // Scroll to linked section
+    var linkID = $(this).parent().attr("id");
+    var section = sectionLinkIDs.sectionIDforLink(linkID);
+    if ( section.length > 0 ) {
+      $("body").animate({
+        scrollTop: $(section).offset().top
+      });
+    }
+
   });
+
+  // A transparent overlay is placed over the map in order to prevent the
+  // map from reading scrolling events from the mouse or trackpad until
+  // the overlay is clicked. This helps prevent the user from getting
+  // 'trapped' in the map during scrolling.
+  // See: http://stackoverflow.com/questions/21992498/disable-mouse-scroll-wheel-zoom-on-embedded-google-maps
+  $(".overlay").click(function() {
+    $(this).css("pointer-events", "none");
+  })
 
 });

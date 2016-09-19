@@ -161,6 +161,7 @@ a {
   margin-top: 48px;
   margin-bottom: 18px;
 }
+
 .project-image {
   border-radius: 50%;
   width: 180px;
@@ -229,8 +230,28 @@ a {
   padding: 64px 0 48px 0;
 }
 
+/*
+  A transparent overlay is placed over the map in order to prevent the
+  map from reading scrolling events from the mouse or trackpad until
+  the overlay is clicked. This helps prevent the user from getting
+  'trapped' in the map during scrolling.
+  See: http://stackoverflow.com/questions/21992498/disable-mouse-scroll-wheel-zoom-on-embedded-google-maps
+*/
 #map {
   height: 220px;
+}
+
+#mapDiv {
+  position: relative;
+}
+.overlay {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 #lets-connect {
@@ -244,8 +265,6 @@ a {
 
 /*  Non-layout styling
 ---------------------------------------------------------------*/
-
-
 
 a {
   color: #404040;
@@ -345,6 +364,21 @@ a {
 
 #footerContacts a:hover {
   color: #2d3e50;
+}
+
+#role {
+  color: #aeaeae;
+}
+
+/*
+  Bootstrap navbar text alignment
+*/
+.navbar {
+  text-align: left;
+}
+
+.navbar-main-content {
+  text-align: center;
 }
 
 @media screen and (min-width: 500px) {

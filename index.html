@@ -41,30 +41,30 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <body>
   <!-- Bootstrap Navbar -->
   <nav class="navbar navbar-light navbar-fixed-top bg-faded">
-  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-    &#9776;
-  </button>
-  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-    <!-- <a class="navbar-brand" href="#">Responsive navbar</a> -->
-    <ul class="nav navbar-nav">
-      <li id="link-profile" class="nav-item active">
-        <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
-      </li>
-      <li id="link-work" class="nav-item">
-        <a class="nav-link" href="#workExperience">Work</a>
-      </li>
-      <li id="link-projects" class="nav-item">
-        <a class="nav-link" href="#projects">Projects</a>
-      </li>
-      <li id="link-education" class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
-      </li>
-      <li id="link-contact" class="nav-item">
-        <a class="nav-link" href="#footerContacts">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs navbar-main-content" id="exCollapsingNavbar2">
+      <!-- <a class="navbar-brand" href="#">Responsive navbar</a> -->
+      <ul class="nav navbar-nav">
+        <li id="link-profile" class="nav-item active">
+          <a class="nav-link" href="#">Profile <span class="sr-only">(current)</span></a>
+        </li>
+        <li id="link-work" class="nav-item">
+          <a class="nav-link" href="#workExperience">Work</a>
+        </li>
+        <li id="link-projects" class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li id="link-education" class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li id="link-contact" class="nav-item">
+          <a class="nav-link" href="#footerContacts">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <div id="main">
 
@@ -89,6 +89,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="mapDiv">
       <h2 id="header-places" class="section-header">Where I've Lived and Worked</h2>
+
+      <!--
+      A transparent overlay that covers the map. Used to prevent the map from reading
+      scrolls from a mouse or trackpad until this overlay is clicked. Better UX.
+      See: http://stackoverflow.com/questions/21992498/disable-mouse-scroll-wheel-zoom-on-embedded-google-maps
+      -->
+      <div class="overlay"></div>
+
     </div>
     <div id="lets-connect" class="dark-gray">
       <h3 id="header-contacts" class="uppercase">Contact</h3>
