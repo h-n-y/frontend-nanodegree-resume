@@ -170,6 +170,10 @@ bio.display = function() {
 // EDUCATION
 
 education.display = function() {
+  // Create section header underline element
+  var $elementSectionUnderline = $(HTMLsectionUnderline);
+  $elementSectionUnderline.addClass("background-green");
+  $("#education").append($elementSectionUnderline);
 
   // DISPLAY SCHOOLS
   education.schools.forEach(function(school) {
@@ -251,6 +255,11 @@ work.display = function() {
 // PROJECTS
 
 projects.display = function() {
+  // Create section header underline element
+  var $elementSectionUnderline = $(HTMLsectionUnderline);
+  $elementSectionUnderline.addClass("background-blue");
+  $("#projects").append($elementSectionUnderline);
+
   // Iterate through each project
   projects.projects.forEach(function(project) {
 
