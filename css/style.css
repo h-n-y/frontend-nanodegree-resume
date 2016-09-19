@@ -288,9 +288,17 @@ a {
   color: #aeaeae;
 }
 
+#header-contacts {
+  color: white;
+}
+
 #projects,
 #mapDiv {
   background-color: #f7f7f3;
+}
+
+#lets-connect {
+  background-color: #e64c66;
 }
 
 /*.location-text {
