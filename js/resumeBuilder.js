@@ -273,11 +273,13 @@ projects.display = function() {
       var elementProjectImage = HTMLprojectImage.replace("%data%", image);
       elementProjectImages += elementProjectImage;
     });
+    var $projectImages = $(HTMLprojectImages).append(elementProjectImages);
 
     // Add this project to the DOM
-    var elementProject = elementProjectTitle + elementProjectDates + elementProjectDescription + elementProjectImages;
+    var elementProject = elementProjectTitle + elementProjectDates + elementProjectDescription;
     $("#projects").append(HTMLprojectStart);
     $(".project-entry:last").append(elementProject);
+    $(".project-entry:last").append($projectImages);
     $(".project-entry:last").after(HTMLentryDivider);
   });
   // Remove unnecessary entry divider after the last project entry
