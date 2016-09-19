@@ -31,9 +31,9 @@ var education = {
       name: "University of Colorado, Boulder",
       location: "Boulder, CO",
       degree: "Computer Science",
-      majors: ["BS", "MS"],
+      majors: ["BS"],
       dates: "September 2013 - May 2015",
-      url: "www.colorado.edu"
+      url: "http://www.colorado.edu"
     },
     {
       name: "Front Range Community College",
@@ -41,7 +41,7 @@ var education = {
       degree: "Computer Science",
       majors: ["AA"],
       dates: "September 2011 - May 2013",
-      url: "www.frontrange.edu"
+      url: "http://www.frontrange.edu"
     }
   ],
   onlineCourses: [
@@ -49,13 +49,7 @@ var education = {
       title: "Front-End Web Development",
       school: "Udacity",
       dates: "September 2016 - Present",
-      url: "www.udacity.com",
-    },
-    {
-      title: "iOS Development",
-      school: "Udacity",
-      dates: "September 2016 - Present",
-      url: "www.udacity.com",
+      url: "http://www.udacity.com",
     }
   ]
 };
@@ -206,6 +200,9 @@ education.display = function() {
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementSchool);
     $(".education-entry:last").after(HTMLentryDivider);
+
+    // Add school URL to link
+    $(".link-school:last").attr("href", school.url);
   });
   // Remove the unnecessary entry divider after the last education entry
   $(".entry-divider:last").remove();
@@ -218,13 +215,16 @@ education.display = function() {
     var elementOnlineTitle  = HTMLonlineTitle.replace("%data%", course.title);
     var elementOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
     var elementOnlineDates  = HTMLonlineDates.replace("%data%", course.dates);
-    var elementOnlineURL    = HTMLonlineURL.replace("%data%", course.url);
+    var elementOnlineURL    = HTMLonlineURL.replace("%data%", course.url.replace("http://", ""));
 
     // Add school to DOM
     var elementOnlineClass = elementOnlineDates + elementOnlineTitle + elementOnlineSchool + elementOnlineURL;
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementOnlineClass);
     $(".education-entry:last").after(HTMLentryDivider);
+
+    // Add school URL to link
+    $(".link-online-school:last").attr("href", course.url);
   });
   // Remove unnecessary entry divider after the last education entry
   $(".entry-divider:last").remove();

@@ -27,7 +27,7 @@ var HTMLblog = '<li class="flex-item"><a href="#" class="contact-link link-blog 
 //var HTMLlocation = '<li class="flex-item contact-location"><span class="contact-info">%data%</span></li>';
 var HTMLlocation = '<p id="location">%data%</p>'
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
+var HTMLbioPic = '<img src="%data%" class="biopic" alt="bio picture">';
 var HTMLgreeting = '<p class="greeting">%data%</p>'
 var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 
@@ -46,10 +46,10 @@ var HTMLprojectTitle = '<h3 class="project-title"><a href="#">%data%</a></h3>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p class="project-description">%data%</p>';
 var HTMLprojectImages = '<div class="flex-box"></div>';
-var HTMLprojectImage = '<div class="image-container"><img class="project-image" src="%data%"></div>';
+var HTMLprojectImage = '<div class="image-container"><img class="project-image" src="%data%" alt="project image"></div>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<h3 class="school-name"><a href="#">%data%</a></h3>';
+var HTMLschoolName = '<h3 class="school-name"><a class="link-school" href="#">%data%</a></h3>';
 var HTMLschoolDegree = '<p>%data%</p>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
@@ -60,7 +60,7 @@ var HTMLonlineClasses = '<h3 class="online-class-header">Online Classes</h3>';
 var HTMLonlineTitle = '<h4 class="online-course-title uppercase">%data%</h4>';
 var HTMLonlineSchool = '<p class="uppercase">%data%</p>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<br><a class="link-online-school" href="#">%data%</a>';
 
 // Used to place a bold underline beneath each section header
 var HTMLsectionUnderline = '<div class="section-underline"></div>';
