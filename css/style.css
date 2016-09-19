@@ -25,6 +25,7 @@
 
   #20dcb4 - Light Green
   #404040 - Grey
+  #f7f7f3 - Pale Tan
 */
 
 * {
@@ -285,6 +286,11 @@ a {
 
 .date-text {
   color: #aeaeae;
+}
+
+#projects,
+#mapDiv {
+  background-color: #f7f7f3;
 }
 
 /*.location-text {
