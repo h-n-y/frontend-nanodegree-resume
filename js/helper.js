@@ -60,7 +60,11 @@ var HTMLonlineSchool = '<p class="uppercase">%data%</p>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
-var HTMLsectionUnderline = '<div class="section-underline"></div>'
+// Used to place a bold underline beneath each section header
+var HTMLsectionUnderline = '<div class="section-underline"></div>';
+
+// Used to separate entries within a single section (i.e. used to separate work entries )
+var HTMLentryDivider = '<div class="entry-divider"></div>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';

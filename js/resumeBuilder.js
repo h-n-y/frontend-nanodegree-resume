@@ -49,6 +49,12 @@ var education = {
       school: "Udacity",
       dates: "September 2016 - Present",
       url: "www.udacity.com",
+    },
+    {
+      title: "iOS Development",
+      school: "Udacity",
+      dates: "September 2016 - Present",
+      url: "www.udacity.com",
     }
   ]
 };
@@ -185,7 +191,10 @@ education.display = function() {
     var elementSchool = elementSchoolDates + elementSchoolName + elementSchoolDegree + elementMajorsList + elementSchoolLocation;
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementSchool);
+    $(".education-entry:last").after(HTMLentryDivider);
   });
+  // Remove the unnecessary entry divider after the last education entry
+  $(".entry-divider:last").remove();
 
   // DISPLAY ONLINE COURSES
   $("#education").append(HTMLonlineClasses);
@@ -201,7 +210,10 @@ education.display = function() {
     var elementOnlineClass = elementOnlineDates + elementOnlineTitle + elementOnlineSchool + elementOnlineURL;
     $("#education").append(HTMLschoolStart);
     $(".education-entry:last").append(elementOnlineClass);
+    $(".education-entry:last").after(HTMLentryDivider);
   });
+  // Remove unnecessary entry divider after the last education entry
+  $(".entry-divider:last").remove();
 };
 
 
@@ -228,7 +240,11 @@ work.display = function() {
     var elementJob = elementDates + elementTitle + elementEmployer + elementDescription + elementLocation;
     $("#workExperience").append(HTMLworkStart);
     $(".work-entry:last").append(elementJob);
+    $(".work-entry:last").after($(HTMLentryDivider));
   });
+
+  // Remove the unnecessary divider placed after the last work entry
+  $(".entry-divider:last").remove();
 };
 
 
@@ -253,7 +269,10 @@ projects.display = function() {
     var elementProject = elementProjectTitle + elementProjectDates + elementProjectDescription + elementProjectImages;
     $("#projects").append(HTMLprojectStart);
     $(".project-entry:last").append(elementProject);
+    $(".project-entry:last").after(HTMLentryDivider);
   });
+  // Remove unnecessary entry divider after the last project entry
+  $(".entry-divider:last").remove();
 };
 
 

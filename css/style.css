@@ -155,7 +155,7 @@ a {
 .work-entry,
 .project-entry,
 .education-entry {
-  margin-bottom: 48px;
+  margin: 24px 0;
 }
 
 .work-title,
@@ -241,11 +241,19 @@ a {
   background-color: #1bbc9b;
 }
 
+.entry-divider {
+  width: 30px;
+  height: 5px;
+  margin: 0 auto;
+  background-color: #aeaeae;
+}
+
 .section-underline {
   width: 70%;
   height: 3px;
   margin: 12px auto 48px auto;
 }
+
 
 .text-color-dark {
   color: #404040;
