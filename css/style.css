@@ -18,7 +18,7 @@
 */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body,
@@ -32,42 +32,42 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
-  /*font-family: "Roboto", sans-serif;*/
+    padding: 0;
+    margin: 0;
+  /*font-family: "Roboto", sans-serif;*/;
 }
 
 body {
   /*padding-left: 12px;
   padding-right: 12px;*/
-  text-align: center;
-  color: 404040;
-  font-family: "Raleway", sans-serif;
+    text-align: center;
+    color: #404040;
+    font-family: "Raleway", sans-serif;
 }
 
 h2 {
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 p,
 span {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /*#header,
@@ -76,103 +76,103 @@ a {
 }*/
 
 .bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .biopic {
-  border: 16px solid #20dcb4;
-  border-radius: 50%;
-  width: 50%;
-  max-width: 220px;
-  display: block;
-  margin: 0 auto 16px auto;
+    border: 16px solid #20dcb4;
+    border-radius: 50%;
+    width: 50%;
+    max-width: 220px;
+    display: block;
+    margin: 0 auto 16px auto;
 }
 
 .contact-info {
-  display: none;
+    display: none;
 }
 
 .contact-icon {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 .contact-icon,
 .contact-info {
-  width: 100%;
+    width: 100%;
 }
 
 .contact-location {
-  width: 100%;
+    width: 100%;
 }
 
 .flex-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .section-header,
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .section-header {
-  margin-bottom: 12px;
-  letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
 }
 
 .header-general {
   /*background-image: url("../images/background.png");
   background-size: cover;*/
-  padding-top: 150px;
-  padding-bottom: 64px;
+    padding-top: 150px;
+    padding-bottom: 64px;
 }
 
 .header-about {
   /*padding: 64px 12px;*/
-  padding: 48px 12px 80px 12px;
+    padding: 48px 12px 80px 12px;
 }
 
 .header-about-content {
-  width: 100%;
-  max-width: 720px;
+    width: 100%;
+    max-width: 720px;
 }
 
 .greeting {
-  font-size: 24px;
-  margin-bottom: 16px;
+    font-size: 24px;
+    margin-bottom: 16px;
 }
 
 .image-container {
-  width: 100%;
+    width: 100%;
 }
 
 .list-majors {
-  margin-top: 6px;
-  margin-bottom: 16px;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
+
 .major {
-  display: inline-block;
-  margin-right: 8px;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 .online-class-header {
-  margin-top: 48px;
-  margin-bottom: 18px;
+    margin-top: 48px;
+    margin-bottom: 18px;
 }
 
 .project-image {
-  border-radius: 50%;
-  width: 180px;
-  height: 180px;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
 }
 
 .work-entry,
 .project-entry,
 .education-entry {
-  margin: 24px auto;
-  max-width: 720px;
+    margin: 24px auto;
+    max-width: 720px;
 }
 
 .work-title,
@@ -180,54 +180,54 @@ a {
 .online-course-title,
 .school-name,
 .image-container {
-  margin-top: 12px;
-  margin-bottom: 8px;
+    margin-top: 12px;
+    margin-bottom: 8px;
 }
 
 .work-description,
 .project-description {
-  margin-top: 16px;
-  margin-bottom: 12px;
+    margin-top: 16px;
+    margin-bottom: 12px;
 }
 
 .date-text {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 #name {
   /*margin: 150px auto 12px auto;*/
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 #location {
-  margin-top: 16px;
-  margin-bottom: 200px;
+    margin-top: 16px;
+    margin-bottom: 200px;
 }
 
 #topContacts {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 #skills-h3 {
-  margin-top: 64px;
-  margin-bottom: 8px;
-  color: #20dcb4;
+    margin-top: 64px;
+    margin-bottom: 8px;
+    color: #20dcb4;
 }
 
 #skills {
-  line-height: 2em;
+    line-height: 2em;
 }
 
 #workExperience,
 #projects,
 #education {
-  padding-top: 64px;
-  padding-bottom: 48px;
-  padding: 64px 12px 48px 12px;
+    padding-top: 64px;
+    padding-bottom: 48px;
+    padding: 64px 12px 48px 12px;
 }
 
 #mapDiv {
-  padding: 64px 0 48px 0;
+    padding: 64px 0 48px 0;
 }
 
 /*
@@ -238,189 +238,189 @@ a {
   See: http://stackoverflow.com/questions/21992498/disable-mouse-scroll-wheel-zoom-on-embedded-google-maps
 */
 #map {
-  height: 220px;
+    height: 220px;
 }
 
 #mapDiv {
-  position: relative;
+    position: relative;
 }
+
 .overlay {
-  background: transparent;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 #lets-connect {
-  padding-top: 24px;
-  padding-bottom: 36px;
+    padding-top: 24px;
+    padding-bottom: 36px;
 }
 
 #header-contacts {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 /*  Non-layout styling
 ---------------------------------------------------------------*/
 
 a {
-  color: #404040;
+    color: #404040;
 }
 
 .background-pink {
-  background-color: #e64c66;
+    background-color: #e64c66;
 }
 
 .background-green {
-  background-color: #1bbc9b;
+    background-color: #1bbc9b;
 }
 
 .background-blue {
-  background-color: #2d3e50;
+    background-color: #2d3e50;
 }
 
 .entry-divider {
-  width: 30px;
-  height: 5px;
-  margin: 0 auto;
-  background-color: #aeaeae;
+    width: 30px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #aeaeae;
 }
 
 .section-underline {
-  width: 70%;
-  max-width: 700px;
-  height: 3px;
-  margin: 12px auto 48px auto;
+    width: 70%;
+    max-width: 700px;
+    height: 3px;
+    margin: 12px auto 48px auto;
 }
 
 .school-name {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .online-class-header,
 .school-name {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .text-color-dark {
-  color: #404040;
+    color: #404040;
 }
 
 .header-general {
-  background-color: #464d57;
-  background-color: #222130;
-  background-color: #2d3e50;
-  color: white;
+    background-color: #464d57;
+    background-color: #222130;
+    background-color: #2d3e50;
+    color: white;
 }
 
 .header-about {
-  background-color: #d4e8d3;
-  background-color: #1bbc9b;
+    background-color: #d4e8d3;
+    background-color: #1bbc9b;
 }
 
 .greeting {
-  color: white;
+    color: white;
 }
 
 .contact-link {
-  color: white;
+    color: white;
 }
 
 .contact-link:hover {
-  color: #e64c66;
+    color: #e64c66;
 }
 
 .date-text {
-  color: #aeaeae;
+    color: #aeaeae;
 }
 
 .skill {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 .welcome-message {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 #header-contacts {
-  color: white;
+    color: white;
 }
 
 #projects,
 #mapDiv {
-  background-color: #f7f7f3;
+    background-color: #f7f7f3;
 }
 
 #lets-connect {
-  background-color: #e64c66;
+    background-color: #e64c66;
 }
 
 #skills-h3 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 #footerContacts a:hover {
-  color: #2d3e50;
+    color: #2d3e50;
 }
 
 #role {
-  color: #aeaeae;
+    color: #aeaeae;
 }
 
 /*
   Bootstrap navbar text alignment
 */
 .navbar {
-  text-align: left;
+    text-align: left;
 }
 
 .navbar-main-content {
-  text-align: center;
+    text-align: center;
 }
 
 @media screen and (min-width: 500px) {
 
-  .header-general,
+    .header-general,
   .header-about,
   #workExperience,
   #projects,
   #education,
   #header-places {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+        padding-left: 16px;
+        padding-right: 16px;
+    };
 }
-
 
 @media screen and (min-width: 550px) {
 
   /* Two-column layout for project images */
-  .image-container {
-    width: 50%;
-  }
+    .image-container {
+        width: 50%;
+    };
 }
 
 @media screen and (min-width: 720px) {
 
   /* Move contact icons closer together */
 
-  #topContacts,
+    #topContacts,
   #footerContacts {
-    justify-content: center;
-  }
+        justify-content: center;
+    }
 
-  .flex-item {
-    width: 60px;
-    margin-left: 12px;
-    margin-right: 12px;
-  }
+    .flex-item {
+        width: 60px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 
-  #map {
-    height: 400px;
-  }
+    #map {
+        height: 400px;
+    }
 
   /*.header-general {
     padding-top: 200px;
@@ -430,52 +430,52 @@ a {
   .header-about {
     padding-top: 120px;
     padding-bottom: 120px;
-  }*/
+  }*/;
 }
 
 @media screen and (min-width: 1024px) {
 
-  h2 {
-    font-size: 2.0rem;
-  }
+    h2 {
+        font-size: 2.0rem;
+    }
 
-  h4 {
-    font-size: 1.4rem;
-  }
+    h4 {
+        font-size: 1.4rem;
+    }
 
-  p,
+    p,
   span {
-    font-size: 22px;
-  }
+        font-size: 22px;
+    }
 
-  .date-text,
+    .date-text,
   .location-text {
-    font-size: 18px;
-  }
+        font-size: 18px;
+    }
 
-  .greeting {
-    font-size: 32px;
-  }
+    .greeting {
+        font-size: 32px;
+    }
 
-  .welcome-message {
-    font-size: 24px;
-  }
+    .welcome-message {
+        font-size: 24px;
+    }
 
-  .skill {
-    font-size: 1.6rem;
-  }
+    .skill {
+        font-size: 1.6rem;
+    }
 
-  .header-general {
-    padding-top: 200px;
-    padding-bottom: 88px;
-  }
+    .header-general {
+        padding-top: 200px;
+        padding-bottom: 88px;
+    }
 
-  .header-about {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
+    .header-about {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 
-  #skills-h3 {
-    font-size: 1.5rem;
-  }
+    #skills-h3 {
+        font-size: 1.5rem;
+    };
 }
