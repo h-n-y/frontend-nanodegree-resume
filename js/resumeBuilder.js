@@ -1,6 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+
 /*
 Biography
 */
@@ -135,10 +133,6 @@ bio.display = function() {
     var $greetingContainer = $(HTMLheaderAboutContent).append(elementGreeting).append(elementWelcomeMsg).append(HTMLskillsStart);
     $elementHeaderAbout.append($picContainer);
     $elementHeaderAbout.append($greetingContainer);
-    // $elementHeaderAbout.append(elementBioPic);
-    // $elementHeaderAbout.append(elementGreeting);
-    // $elementHeaderAbout.append(elementWelcomeMsg);
-    // $elementHeaderAbout.append(HTMLskillsStart);
 
     $("#header").append($elementHeaderGeneral);
     $("#header").append($elementHeaderAbout);

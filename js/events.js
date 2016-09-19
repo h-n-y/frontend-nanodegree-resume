@@ -17,7 +17,7 @@ $(function() {
         section: "#lets-connect",
         link: "#link-contact"
     }];
-    // Convenience function that returns the section id for the corresponding link or ""
+    // Convenience method that returns the section id for the corresponding link or ""
     // if not found
     sectionLinkIDs.sectionIDforLink = function(linkID) {
         var sectionID = "";
