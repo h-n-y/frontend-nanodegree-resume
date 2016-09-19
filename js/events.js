@@ -59,6 +59,8 @@ $(function() {
   $(".nav-link").click(function() {
     $(".nav-link").parent().removeClass("active");
     $(this).parent().addClass("active");
+
+    $(".navbar-toggler").click();
   });
 
 });

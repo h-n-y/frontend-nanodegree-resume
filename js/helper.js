@@ -31,11 +31,11 @@ var HTMLgreeting = '<p class="greeting">%data%</p>'
 var HTMLwelcomeMsg = '<p class="welcome-message">%data%</p>';
 
 var HTMLskillsStart = '<h3 id="skills-h3" class="uppercase">Skills</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item uppercase">%data%</li>';
+var HTMLskills = '<li class="skill bold uppercase">%data%</li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<p class="work-employer uppercase"><a href="#">%data%</a></p>';
-var HTMLworkTitle = ' <p class="work-title uppercase bold">%data%</p>';
+var HTMLworkEmployer = '<h4 class="work-employer uppercase"><a href="#">%data%</a></h4>';
+var HTMLworkTitle = ' <h4 class="work-title uppercase bold">%data%</h4>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p class="work-description">%data%</p>';
